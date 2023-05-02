@@ -41,8 +41,7 @@ public:
 
     Triangle()
     {
-        sides_count = 3;
-        name = "Треугольник";
+
         length_side_a = 10;
         length_side_b = 20;
         length_side_c = 30;
@@ -51,7 +50,7 @@ public:
         value_angle_C = 70;
     }
 
-    Triangle(int sides_count, std::string name, int length_side_a, int length_side_b, int length_side_c,
+    Triangle(int length_side_a, int length_side_b, int length_side_c,
         int value_angle_A, int value_angle_B, int value_angle_C)
     {
         this->length_side_a = length_side_a;
@@ -60,6 +59,8 @@ public:
         this->value_angle_A = value_angle_A;
         this->value_angle_B = value_angle_B;
         this->value_angle_C = value_angle_C;
+        sides_count = 3;
+        name = "Треугольник";
     }
 
     int get_lenght_side_a()
