@@ -1,4 +1,4 @@
-п»ї#include <iostream>
+#include <iostream>
 #include <windows.h>
 
 class Figure {
@@ -10,7 +10,7 @@ public:
     Figure()
     {
         sides_count = 0;
-        name = "Р¤РёРіСѓСЂР°";
+        name = "Фигура";
     }
 
     Figure(int sides_count, std::string name)
@@ -48,7 +48,7 @@ public:
         value_angle_B = 60;
         value_angle_C = 70;
         sides_count = 3;
-        name = "РўСЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Треугольник";
     }
     
     Triangle(int length_side_a, int length_side_b, int length_side_c,
@@ -61,7 +61,7 @@ public:
         this->value_angle_B = value_angle_B;
         this->value_angle_C = value_angle_C;
         sides_count = 3;
-        name = "РўСЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Треугольник";
     }
 
     int get_lenght_side_a()
@@ -96,8 +96,8 @@ public:
 
     void print_info() {
         std::cout << get_name() << std::endl;
-        std::cout << "РЎС‚РѕСЂРѕРЅС‹: " << " a = " << get_lenght_side_a() << " b = " << get_lenght_side_b() << " c = " << get_lenght_side_c() << std::endl;
-        std::cout << "РЈРіР»С‹: " << " Рђ = " << get_value_angle_A() << " B = " << get_value_angle_B() << " C = " << get_value_angle_C() << std::endl << std::endl;
+        std::cout << "Стороны: " << " a = " << get_lenght_side_a() << " b = " << get_lenght_side_b() << " c = " << get_lenght_side_c() << std::endl;
+        std::cout << "Углы: " << " А = " << get_value_angle_A() << " B = " << get_value_angle_B() << " C = " << get_value_angle_C() << std::endl << std::endl;
     }
 };
 
@@ -107,7 +107,7 @@ public:
     Right_triangle()
     {  
         value_angle_C = 90;
-        name = "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Прямоугольный треугольник";
     }
 
     Right_triangle(int length_side_a, int length_side_b, int length_side_c,
@@ -119,7 +119,7 @@ public:
         this->value_angle_A = value_angle_A;
         this->value_angle_B = value_angle_B;
         value_angle_C = 90;
-        name = "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Прямоугольный треугольник";
     }
 };
 
@@ -131,7 +131,7 @@ public:
         length_side_c = 10;
         value_angle_A = 40;
         value_angle_C = 40;
-        name = "Р Р°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Равнобедренный треугольник";
     }
 
     Isosceles_triangle(int length_side_a, int length_side_b,
@@ -143,7 +143,7 @@ public:
         this->value_angle_A = value_angle_A;
         this->value_angle_B = value_angle_B;
         value_angle_C = value_angle_A;
-        name = "Р Р°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Равнобедренный треугольник";
     }
 };
 
@@ -151,7 +151,7 @@ class Equilateral_triangle : public Triangle {
 public:
     Equilateral_triangle()
     {
-        name = "Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Равносторонний треугольник";
         length_side_a = 30;
         length_side_b = 30;
         length_side_c = 30;
@@ -168,7 +168,7 @@ public:
         value_angle_A = 60;
         value_angle_B = value_angle_A;
         value_angle_C = value_angle_B;
-        name = "Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
+        name = "Равносторонний треугольник";
     }
 };
 
@@ -180,7 +180,7 @@ public:
 
     Quadrangle()
     {
-        name = "Р§РµС‚С‹СЂС‘С…СѓРіРѕР»СЊРЅРёРє";
+        name = "Четырёхугольник";
         length_side_a = 10;
         length_side_b = 20;
         length_side_c = 30;
@@ -203,7 +203,7 @@ public:
         this->value_angle_C = value_angle_C;
         this->value_angle_D = value_angle_D;
         sides_count = 4;
-        name = "Р§РµС‚С‹СЂС‘С…СѓРіРѕР»СЊРЅРёРє";
+        name = "Четырёхугольник";
     }
 
     int get_lenght_side_d()
@@ -218,9 +218,9 @@ public:
 
     void print_info() {
         std::cout << get_name() << std::endl;
-        std::cout << "РЎС‚РѕСЂРѕРЅС‹: " << " a = " << get_lenght_side_a() << " b = " << get_lenght_side_b() << " c = " << get_lenght_side_c() <<
+        std::cout << "Стороны: " << " a = " << get_lenght_side_a() << " b = " << get_lenght_side_b() << " c = " << get_lenght_side_c() <<
             " d = " << get_lenght_side_d() << std::endl;
-        std::cout << "РЈРіР»С‹: " << " Рђ = " << get_value_angle_A() << " B = " << get_value_angle_B() << " C = " << get_value_angle_C() <<
+        std::cout << "Углы: " << " А = " << get_value_angle_A() << " B = " << get_value_angle_B() << " C = " << get_value_angle_C() <<
             " D = " << get_value_angle_D() << std::endl << std::endl;
     }
 };
@@ -231,7 +231,7 @@ public:
     Parallelogram()
     {
         sides_count = 4;
-        name = "РџР°СЂР°Р»Р»РµР»РѕРіСЂР°РјРј";
+        name = "Параллелограмм";
         length_side_a = 10;
         length_side_b = 20;
         length_side_c = 10;
@@ -254,7 +254,7 @@ public:
         value_angle_C = value_angle_A;
         value_angle_D = value_angle_B;
         sides_count = 4;
-        name = "РџР°СЂР°Р»Р»РµР»РѕРіСЂР°РјРј";
+        name = "Параллелограмм";
     }
 };
 
@@ -263,7 +263,7 @@ class Rectangle1 : public Parallelogram
 public:
     Rectangle1()
     {
-        name = "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє";
+        name = "Прямоугольник";
         length_side_a = 10;
         length_side_b = 20;
         length_side_c = 10;
@@ -285,7 +285,7 @@ public:
         value_angle_C = value_angle_B;
         value_angle_D = value_angle_C;
         sides_count = 4;
-        name = "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє";
+        name = "Прямоугольник";
     }
 };
 
@@ -294,7 +294,7 @@ class Rhombus: public Parallelogram
 public:
     Rhombus()
     {
-        name = "Р РѕРјР±";
+        name = "Ромб";
         length_side_a = 30;
         length_side_b = 30;
         length_side_c = 30;
@@ -316,7 +316,7 @@ public:
         value_angle_C = value_angle_A;
         value_angle_D = value_angle_B;
         sides_count = 4;
-        name = "Р РѕРјР±";
+        name = "Ромб";
     }
 };
 
@@ -325,7 +325,7 @@ public:
  public:
      Square()
      {
-        name = "РљРІР°РґСЂР°С‚";
+        name = "Квадрат";
         length_side_a = 10;
         length_side_b = 10;
         length_side_c = 10;
@@ -347,7 +347,7 @@ public:
          value_angle_C = value_angle_B;
          value_angle_D = value_angle_C;
          sides_count = 4;
-         name = "РљРІР°РґСЂР°С‚";
+         name = "Квадрат";
      }
  };
 
@@ -358,10 +358,10 @@ public:
      SetConsoleCP(1251);
      std::system("chcp 1251");
 
-     //РЇ СЃРѕР·РґР°СЋ РЅРµСЃРєРѕР»СЊРєРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ, РїРµСЂРІС‹Р№, РІС‚РѕСЂРѕР№ Рё С‚СЂРµС‚РёР№, РїСЂРё СЃРѕР·РґР°РЅРёРё РїРµСЂРІРѕРіРѕ 
-     // Р°СЂРіСѓРјРµРЅС‚С‹ РЅРµ РїРµСЂРµРґР°СЋС‚СЃСЏ, РїРѕСЃРєРѕР»СЊРєСѓ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Р±Р°Р·РѕРІС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
-     // РїСЂРё СЃРѕР·РґР°РЅРёРё РґРІСѓС… СЃР»СѓРґСѓСЋС‰РёС… РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё,
-     // РєРѕС‚РѕСЂРѕРјСѓ СЏ РїРµСЂРµРґР°СЋ СѓРіР»С‹ Рё РґР»РёРЅС‹ СЃС‚РѕСЂРѕРЅ. РЈРіР»С‹ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё, РґР»РёРЅС‹ СЃС‚РѕСЂРѕРЅ РїРѕ СЂР°Р·РЅРѕРјСѓ.
+     //Я создаю несколько треугольников, первый, второй и третий, при создании первого 
+     // аргументы не передаются, поскольку используется базовый конструктор
+     // при создании двух слудующих используется конструктор с параметрами,
+     // которому я передаю углы и длины сторон. Углы при необходимости, длины сторон по разному.
      Triangle tr1;
      Triangle tr2(1,2,3,4,5,6);
      Triangle tr3(1, 2, 3, 4, 7, 8);
@@ -372,8 +372,8 @@ public:
      Triangle* par_tr3 = &tr3;
      par_tr3->print_info();
 
-     // СЃРѕР·РґР°С‘Рј РїСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє, Сѓ РЅРµРіРѕ СѓРіРѕР» РЎ СЂР°РІРµРЅ 90 РіСЂР°РґСѓСЃРѕРІ, 
-     // РїРѕСЌС‚РѕРјСѓ СЌС‚РѕС‚ СѓРіРѕР» РЅРµ РїРµСЂРµРґР°С‘С‚СЃСЏ РїСЂРё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё Р±Р°Р·РѕРІРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
+     // создаём прямоугольный треугольник, у него угол С равен 90 градусов, 
+     // поэтому этот угол не передаётся при использовании базового конструктора.
 
      Right_triangle rt1;
      Right_triangle* par_rt1 = &rt1;
@@ -385,8 +385,8 @@ public:
      Right_triangle* par_rt3 = &rt3;
      par_rt3->print_info();
 
-// СЃРѕР·РґР°С‘Рј СЂР°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє, С‚Рѕ РµСЃС‚СЊ Р° = СЃ, Рђ = РЎ
-// РїРѕСЌС‚РѕРјСѓ РјРѕР¶РЅРѕ РЅР°Р·РЅР°С‡РёС‚СЊ С‚РѕР»СЊРєРѕ a,b,A,B
+// создаём равнобедренный треугольник, то есть а = с, А = С
+// поэтому можно назначить только a,b,A,B
      Isosceles_triangle itr1;
      Isosceles_triangle* par_itr1 = &itr1;
      par_itr1->print_info();
@@ -397,8 +397,8 @@ public:
      Isosceles_triangle* par_itr3 = &itr3;
      par_itr3->print_info();
 
-     // СЃРѕР·РґР°СЋ СЂР°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє, РјРѕР¶РЅРѕ Р·Р°РґР°С‚СЊ РґР»РёРЅСѓ СЃС‚РѕСЂРѕРЅС‹, Р° РІСЃРµ СѓРіР»С‹ 60 РіСЂР°РґСѓСЃРѕРІ
-     // РїРѕСЌС‚РѕРјСѓ РјРѕР¶РЅРѕ РЅР°Р·РЅР°С‡РёС‚СЊ С‚РѕР»СЊРєРѕ a
+     // создаю равносторонний треугольник, можно задать длину стороны, а все углы 60 градусов
+     // поэтому можно назначить только a
 
      Equilateral_triangle etr1;
      Equilateral_triangle* par_etr1 = &etr1;
@@ -410,7 +410,7 @@ public:
      Equilateral_triangle* par_etr3 = &etr3;
      par_etr3->print_info();
 
-     // СЃРѕР·РґР°СЋ С‡РµС‚С‹СЂС‘С…СѓРіРѕР»СЊРЅРёРє, РїСЂРѕРёР·РІРѕР»СЊРЅС‹Рµ СЃС‚РѕСЂРѕРЅС‹ Рё СѓРіР»С‹
+     // создаю четырёхугольник, произвольные стороны и углы
 
      Quadrangle qv1;
      Quadrangle* par_qv1 = &qv1;
@@ -422,8 +422,8 @@ public:
      Quadrangle* par_qv3 = &qv3;
      par_qv3->print_info();
 
-     // СЃРѕР·РґР°СЋ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє, СЃС‚РѕСЂРѕРЅС‹ a,c Рё b,d РїРѕРїР°СЂРЅРѕ СЂР°РІРЅС‹, РІСЃРµ СѓРіР»С‹ СЂР°РІРЅС‹ 90
-     // Р·Р°РґР°РІР°С‚СЊ РјРѕР¶РЅРѕ С‚РѕР»СЊРєРѕ СЃС‚РѕСЂРѕРЅС‹ a Рё b 
+     // создаю прямоугольник, стороны a,c и b,d попарно равны, все углы равны 90
+     // задавать можно только стороны a и b 
      Rectangle1 rct;
      Rectangle1* par_rct = &rct;
      par_rct->print_info();
@@ -435,7 +435,7 @@ public:
      par_rct3->print_info();
      
 
-     // СЃРѕР·РґР°СЋ РєРІР°РґСЂР°С‚, РІСЃРµ СЃС‚РѕСЂРѕРЅС‹ СЂР°РІРЅС‹, РІСЃРµ СѓРіР»С‹ СЂР°РІРЅС‹ 90
+     // создаю квадрат, все стороны равны, все углы равны 90
      Square sq1;
      Square* par_sq1 = &sq1;
      par_sq1->print_info();
@@ -446,7 +446,7 @@ public:
      Square* par_sq3 = &sq3;
      par_sq3->print_info();
 
-     //СЃС‚РѕСЂРѕРЅС‹ a,c Рё b,d РїРѕРїР°СЂРЅРѕ СЂР°РІРЅС‹, СѓРіР»С‹ A,C Рё B,D РїРѕРїР°СЂРЅРѕ СЂР°РІРЅС‹
+     //стороны a,c и b,d попарно равны, углы A,C и B,D попарно равны
 
      Parallelogram prl1;
      Parallelogram* par_prl1 = &prl1;
@@ -458,7 +458,7 @@ public:
      Parallelogram* par_prl3 = &prl3;
      par_prl3->print_info();
 
-     //СЃРѕР·РґР°СЋ СЂРѕРјР±, РІСЃРµ СЃС‚РѕСЂРѕРЅС‹ СЂР°РІРЅС‹, СѓРіР»С‹ A,C Рё B,D РїРѕРїР°СЂРЅРѕ СЂР°РІРЅС‹
+     //создаю ромб, все стороны равны, углы A,C и B,D попарно равны
 
      Rhombus rh1;
      Rhombus* par_rh1 = &rh1;
