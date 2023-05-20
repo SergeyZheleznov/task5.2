@@ -26,6 +26,11 @@ public:
     int get_sides_count() {
         return sides_count;
     };
+
+    void virtual print_info() {
+        std::cout << get_name() << std::endl;
+        std::cout << "Стороны: " << get_sides_count() << std::endl << std::endl;
+    }
 };
 
 class Triangle : public Figure
@@ -94,7 +99,8 @@ public:
         return value_angle_C;
     };
 
-    void print_info() {
+    void print_info() override
+    {
         std::cout << get_name() << std::endl;
         std::cout << "Стороны: " << " a = " << get_lenght_side_a() << " b = " << get_lenght_side_b() << " c = " << get_lenght_side_c() << std::endl;
         std::cout << "Углы: " << " А = " << get_value_angle_A() << " B = " << get_value_angle_B() << " C = " << get_value_angle_C() << std::endl << std::endl;
@@ -216,7 +222,8 @@ public:
         return value_angle_D;
     };
 
-    void print_info() {
+    void print_info() override
+    {
         std::cout << get_name() << std::endl;
         std::cout << "Стороны: " << " a = " << get_lenght_side_a() << " b = " << get_lenght_side_b() << " c = " << get_lenght_side_c() <<
             " d = " << get_lenght_side_d() << std::endl;
@@ -358,6 +365,11 @@ public:
      SetConsoleCP(1251);
      std::system("chcp 1251");
 
+     Figure f;
+     f.print_info();
+
+
+     
      //Я создаю несколько треугольников, первый, второй и третий, при создании первого 
      // аргументы не передаются, поскольку используется базовый конструктор
      // при создании двух слудующих используется конструктор с параметрами,
@@ -365,49 +377,49 @@ public:
      Triangle tr1;
      Triangle tr2(1,2,3,4,5,6);
      Triangle tr3(1, 2, 3, 4, 7, 8);
-     Triangle* par_tr1 = &tr1;
+     Figure* par_tr1 = &tr1;
      par_tr1->print_info();
-     Triangle* par_tr2 = &tr2;
+     Figure* par_tr2 = &tr2;
      par_tr2->print_info();
-     Triangle* par_tr3 = &tr3;
+     Figure* par_tr3 = &tr3;
      par_tr3->print_info();
 
      // создаём прямоугольный треугольник, у него угол С равен 90 градусов, 
      // поэтому этот угол не передаётся при использовании базового конструктора.
 
      Right_triangle rt1;
-     Right_triangle* par_rt1 = &rt1;
+     Figure* par_rt1 = &rt1;
      par_rt1->print_info();
      Right_triangle rt2(1,2,3,4,5);
-     Right_triangle* par_rt2 = &rt2;
+     Figure* par_rt2 = &rt2;
      par_rt2->print_info();
      Right_triangle rt3(12, 23, 34, 45, 55);
-     Right_triangle* par_rt3 = &rt3;
+     Figure* par_rt3 = &rt3;
      par_rt3->print_info();
 
 // создаём равнобедренный треугольник, то есть а = с, А = С
 // поэтому можно назначить только a,b,A,B
      Isosceles_triangle itr1;
-     Isosceles_triangle* par_itr1 = &itr1;
+     Figure* par_itr1 = &itr1;
      par_itr1->print_info();
      Isosceles_triangle itr2(10,20,40,60);
-     Isosceles_triangle* par_itr2 = &itr2;
+     Figure* par_itr2 = &itr2;
      par_itr2->print_info();
      Isosceles_triangle itr3(1,2,3,4);
-     Isosceles_triangle* par_itr3 = &itr3;
+     Figure* par_itr3 = &itr3;
      par_itr3->print_info();
 
      // создаю равносторонний треугольник, можно задать длину стороны, а все углы 60 градусов
      // поэтому можно назначить только a
 
      Equilateral_triangle etr1;
-     Equilateral_triangle* par_etr1 = &etr1;
+     Figure* par_etr1 = &etr1;
      par_etr1->print_info();
      Equilateral_triangle etr2(11);
-     Equilateral_triangle* par_etr2 = &etr2;
+     Figure* par_etr2 = &etr2;
      par_etr2->print_info();
      Equilateral_triangle etr3 (56);
-     Equilateral_triangle* par_etr3 = &etr3;
+     Figure* par_etr3 = &etr3;
      par_etr3->print_info();
 
      // создаю четырёхугольник, произвольные стороны и углы
@@ -425,46 +437,46 @@ public:
      // создаю прямоугольник, стороны a,c и b,d попарно равны, все углы равны 90
      // задавать можно только стороны a и b 
      Rectangle1 rct;
-     Rectangle1* par_rct = &rct;
+     Figure* par_rct = &rct;
      par_rct->print_info();
      Rectangle1 rct_two(1,2);
-     Rectangle1* par_rct2 = &rct_two;
+     Figure* par_rct2 = &rct_two;
      par_rct2->print_info();
      Rectangle1 rct_three(2,3);
-     Rectangle1* par_rct3 = &rct_three;
+     Figure* par_rct3 = &rct_three;
      par_rct3->print_info();
      
 
      // создаю квадрат, все стороны равны, все углы равны 90
      Square sq1;
-     Square* par_sq1 = &sq1;
+     Figure* par_sq1 = &sq1;
      par_sq1->print_info();
      Square sq2(1);
-     Square* par_sq2 = &sq2;
+     Figure* par_sq2 = &sq2;
      par_sq2->print_info();
      Square sq3(2);
-     Square* par_sq3 = &sq3;
+     Figure* par_sq3 = &sq3;
      par_sq3->print_info();
 
      //стороны a,c и b,d попарно равны, углы A,C и B,D попарно равны
 
      Parallelogram prl1;
-     Parallelogram* par_prl1 = &prl1;
+     Figure* par_prl1 = &prl1;
      par_prl1->print_info();
      Parallelogram prl2(1,2,3,4);
-     Parallelogram* par_prl2 = &prl2;
+     Figure* par_prl2 = &prl2;
      par_prl2->print_info();
      Parallelogram prl3 (20,32,46,54);
-     Parallelogram* par_prl3 = &prl3;
+     Figure* par_prl3 = &prl3;
      par_prl3->print_info();
 
      //создаю ромб, все стороны равны, углы A,C и B,D попарно равны
 
      Rhombus rh1;
-     Rhombus* par_rh1 = &rh1;
+     Figure* par_rh1 = &rh1;
      par_rh1->print_info();
      Rhombus rh2(3,50,40);
-     Rhombus* par_rh2 = &rh2;
+     Figure* par_rh2 = &rh2;
      par_rh2->print_info();
      Rhombus rh3(4,67,56);
      Rhombus* par_rh3 = &rh3;
